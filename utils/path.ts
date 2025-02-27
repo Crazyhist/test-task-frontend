@@ -1,4 +1,4 @@
 export const path = {
-    catalog: '/catalog', // Раздел должен иметь ссылку /catalog/[slug]
-    products: '/products' // Товар должен иметь ссылку /products/[id]
+	catalog: (slug: string) => `/catalog/${slug}`,
+	product: (id: number | string) => `/products/${id}`,
 }

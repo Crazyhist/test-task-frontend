@@ -1,12 +1,22 @@
 import { defineStore } from 'pinia'
 
-/**
- * Хранилище приложения для управления глобальными состояниями.
- */
-export const useApplicationStore = defineStore('application', () => {
-  const welcome = 'Привет!'
+export interface Product {
+	image: string
+	newPrice: number
+	oldPrice?: number
+	brand: string
+	name: string
+	url: string
+}
 
-  return {
-    welcome,
-  }
+export const useCartStore = defineStore('cart', () => {
+	const cart = ref<Product[]>([])
+
+	// Подсчёт количества товаров
+	const totalItems = computed(() => cart.value.length)
+
+	return {
+		cart,
+		totalItems,
+	}
 })
