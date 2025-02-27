@@ -4,10 +4,17 @@
 	>
 		<div class="flex flex-row justify-between items-center">
 			<span>Brand Name</span>
-			<span class="block text-sm text-start">
-				Разработчик
-				<p class="underline">Кирилл Александров</p>
-			</span>
+			<div class="flex flex-col items-start">
+				<span>Разработчик</span>
+				<NuxtLink
+					to="https://spb.hh.ru/resume/b93670ccff0cc76d1b0039ed1f6e6f776b4c52"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="underline"
+				>
+					Кирилл Александров
+				</NuxtLink>
+			</div>
 		</div>
 	</footer>
 </template>
